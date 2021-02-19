@@ -40,7 +40,9 @@ namespace Screen_Scene_System
 
         protected override void LoadContent()
         {
-            font = Content.Load<SpriteFont>("font");
+            conversationScreen.CreateConversation();
+
+            font = Content.Load<SpriteFont>("font2");
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             _stateManager.PushState(conversationScreen);

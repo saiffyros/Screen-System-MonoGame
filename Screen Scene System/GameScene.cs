@@ -200,7 +200,7 @@ namespace Screen_Scene_System
         {
             //_textureManager.AddTexture(textureName, _game.Content.Load<Texture2D>(@"Scenes\" + textureName));
             _selected = _game.Content.Load<Texture2D>("rightarrowUp");
-            _font = _game.Content.Load<SpriteFont>("font");
+            _font = _game.Content.Load<SpriteFont>("font2");
         }
 
         public void Update(GameTime gameTime, PlayerIndex index)
@@ -226,7 +226,7 @@ namespace Screen_Scene_System
             Color myColor;
 
             if (_selected == null)
-                _selected = _game.Content.Load<Texture2D>(@"Misc\selected");
+                _selected = _game.Content.Load<Texture2D>("rightarrowUp");
 
             if (_textPosition == Vector2.Zero)
                 SetText(_text, font);
