@@ -17,7 +17,7 @@ namespace Screen_Scene_System
         private SpriteBatch _spriteBatch;
 
         private int money = 0;
-        public SpriteFont font;
+        public static SpriteFont font;
         public int _money { get { return money; } set { money = value; } }
 
         public Game1()
@@ -41,6 +41,8 @@ namespace Screen_Scene_System
         protected override void LoadContent()
         {
             conversationScreen.CreateConversation();
+
+
 
             font = Content.Load<SpriteFont>("font2");
             _spriteBatch = new SpriteBatch(GraphicsDevice);

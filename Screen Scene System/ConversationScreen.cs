@@ -15,8 +15,9 @@ namespace Screen_Scene_System
         private SpriteFont font;
         private Player player;
         private NonPlayerCharacter npc;
-
         private Texture2D background;
+
+        private int num = 0;
 
         public ConversationScreen(Game game)
             : base(game)
@@ -25,18 +26,19 @@ namespace Screen_Scene_System
 
         public override void Initialize()
         {
-            
+            font = GameRef.Content.Load<SpriteFont>("scenefont");
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
-            font = GameRef.Content.Load<SpriteFont>("font");
+
+            font = GameRef.Content.Load<SpriteFont>("scenefont");
             background = GameRef.Content.Load<Texture2D>(@"/GameScenes/basic_scene");
 
             //CreateConversation();
 
-            Console.WriteLine(conversation.GameScenes.Count);
+            num = conversation.GameScenes.Count;
 
             SetConversation(null, null, "eliza1");
 
@@ -77,7 +79,11 @@ namespace Screen_Scene_System
             base.Draw(gameTime);
 
             GameRef.SpriteBatch.Begin();
-            conversation.Draw(gameTime, GameRef.SpriteBatch, background, font, null);
+
+            GameRef.SpriteBatch.DrawString(Game1.font, num.ToString(), new Vector2(200, 200), Color.Black);
+            
+            conversation.Draw(gameTime, GameRef.SpriteBatch, background, Game1.font, null);
+
             GameRef.SpriteBatch.End();
         }
 

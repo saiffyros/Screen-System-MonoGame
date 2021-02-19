@@ -30,7 +30,7 @@ namespace Screen_Scene_System
         public override void Draw(GameTime gameTime)
         {
             GameRef.SpriteBatch.Begin();
-            GameRef.SpriteBatch.DrawString(GameRef.font, GameRef._money.ToString(), new Vector2(200, 200), Color.Black);
+            //GameRef.SpriteBatch.DrawString(GameRef.font, GameRef._money.ToString(), new Vector2(200, 200), Color.Black);
             GameRef.SpriteBatch.End();
             base.Draw(gameTime);
         }

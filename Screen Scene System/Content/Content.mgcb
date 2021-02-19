@@ -39,3 +39,10 @@
 /processorParam:TextureFormat=Color
 /build:rightarrowUp.png
 
+#begin scenefont.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:scenefont.spritefont
+

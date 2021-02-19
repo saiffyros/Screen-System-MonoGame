@@ -158,6 +158,11 @@ namespace Screen_Scene_System
                 return;
             }
 
+            if (text == null)
+            {
+                text = "Testing string if text is null.";
+            }
+
             string[] parts = text.Split(' ');
 
             foreach (string s in parts)
