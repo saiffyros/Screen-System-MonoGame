@@ -40,7 +40,7 @@ namespace Screen_Scene_System
 
             num = conversation.GameScenes.Count;
 
-            SetConversation(null, null, "eliza1");
+            SetConversation(null, null, "welcome");
 
             base.LoadContent();
         }
@@ -78,6 +78,8 @@ namespace Screen_Scene_System
         {
             base.Draw(gameTime);
 
+            GraphicsDevice.Clear(Color.CornflowerBlue);
+
             GameRef.SpriteBatch.Begin();
 
             //GameRef.SpriteBatch.DrawString(Game1.font, num.ToString() + " game scenes in Conversation", new Vector2(200, 200), Color.Black);
@@ -101,7 +103,7 @@ namespace Screen_Scene_System
 
         public void CreateConversation()
         {
-            conversation = new Conversation("eliza1", "welcome");
+            Conversation conversation = new Conversation("eliza1", "welcome");
             GameScene scene = new GameScene(
             GameRef,
             "basic_scene",
@@ -200,6 +202,10 @@ namespace Screen_Scene_System
             scene.Options.Add(option);
 
             conversation.AddScene("thankyou2", scene);
+
+            ConversationManager.Instance.AddConversation("eliza2", conversation);
+
+            SetConversation(null, null, "eliza1");
         }
     }
 

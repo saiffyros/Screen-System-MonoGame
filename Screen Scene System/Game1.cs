@@ -25,6 +25,7 @@ namespace Screen_Scene_System
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+            Components.Add(new Xin(this));
         }
 
         protected override void Initialize()
@@ -68,7 +69,7 @@ namespace Screen_Scene_System
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Green);
 
             // TODO: Add your drawing code here
 
