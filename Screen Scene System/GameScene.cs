@@ -131,6 +131,7 @@ namespace Screen_Scene_System
         {
             this._game = game;
             this._textureName = textureName;
+            this._text = text;
 
             LoadContent(textureName);
 

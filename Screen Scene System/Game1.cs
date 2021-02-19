@@ -29,6 +29,10 @@ namespace Screen_Scene_System
 
         protected override void Initialize()
         {
+            _graphics.PreferredBackBufferWidth = 1280;
+            _graphics.PreferredBackBufferHeight = 720;
+            _graphics.ApplyChanges();
+
             _stateManager = new StateManager(this);
             screenMoney = new ScreenMoney(this);
             conversationScreen = new ConversationScreen(this);

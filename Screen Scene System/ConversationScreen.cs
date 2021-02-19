@@ -80,7 +80,7 @@ namespace Screen_Scene_System
 
             GameRef.SpriteBatch.Begin();
 
-            GameRef.SpriteBatch.DrawString(Game1.font, num.ToString(), new Vector2(200, 200), Color.Black);
+            //GameRef.SpriteBatch.DrawString(Game1.font, num.ToString() + " game scenes in Conversation", new Vector2(200, 200), Color.Black);
             
             conversation.Draw(gameTime, GameRef.SpriteBatch, background, Game1.font, null);
 
